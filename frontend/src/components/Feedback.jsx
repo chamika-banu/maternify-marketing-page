@@ -1,16 +1,20 @@
 import { motion } from 'framer-motion'
 import mailbox from '../assets/mailbox.svg'
-import ContactForm from './ContactForm'
+import FeedbackForm from './FeedbackForm'
 
-const Contact = () => {
+const Feedback = () => {
 	return (
-		<motion.div initial={{ opacity: 0, y: 100 }}
+		<motion.div
+			initial={{ opacity: 0, y: 100 }}
 			whileInView={{
 				opacity: 1,
 				y: 0,
 				transition: { duration: 1, ease: 'easeInOut' },
 			}}
-			viewport={{ threshold: 0.8, once: true }} className='w-full px-4 md:py-8' id='contact'>
+			viewport={{ threshold: 0.8, once: true }}
+			className='w-full px-4 md:py-8'
+			id='contact'
+		>
 			<div className='mx-auto grid max-w-[1240px] lg:grid-cols-3'>
 				<div className='contact-section my-4 text-center lg:col-span-2 lg:text-left'>
 					<h1 className='py-2 text-2xl font-bold sm:text-3xl md:text-4xl'>
@@ -27,8 +31,8 @@ const Contact = () => {
 						/>
 					</div>
 				</div>
-				<div className='my-4 grid '>
-					<ContactForm />
+				<div className='my-4 grid'>
+					<FeedbackForm />
 					<div></div>
 				</div>
 			</div>
@@ -36,4 +40,4 @@ const Contact = () => {
 	)
 }
 
-export default Contact
+export default Feedback

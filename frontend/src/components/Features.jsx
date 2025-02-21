@@ -8,7 +8,6 @@ import {
 	CircleUser,
 	MapPin,
 } from 'lucide-react'
-
 import BentoBox from './BentoBox'
 
 function Features() {

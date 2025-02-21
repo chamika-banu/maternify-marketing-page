@@ -1,5 +1,4 @@
 import { ReactTyped } from 'react-typed'
-
 import Image from '../assets/iPhones.svg'
 
 function Hero() {

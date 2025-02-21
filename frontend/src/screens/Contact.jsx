@@ -1,8 +1,8 @@
 import { FaLinkedin, FaInstagram, FaAt } from 'react-icons/fa'
 import { Mail } from 'lucide-react'
-import ContactForm from '../components/ContactForm'
+import ContactForm from '../components/FeedbackForm'
 
-function Contact() {	
+function Contact() {
 	return (
 		<div className='mx-auto mt-24 max-w-[1080px] md:mt-32'>
 			<div className='flex flex-col items-center justify-center'>
