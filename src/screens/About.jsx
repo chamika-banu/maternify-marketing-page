@@ -2,12 +2,13 @@ import MemberCard from '../components/MemberCard'
 import user from '../assets/members/user.jpeg'
 import chamika from '../assets/members/chamika.jpg'
 import hansaja from '../assets/members/hansaja.png'
+import gevin from '../assets/members/gevin.jpg'
 
 function About() {
 	const members = [
 		['Karunya Jeyabalan', 'https://www.linkedin.com/in/johndoe', user],
 		['Lehara Chamee', 'https://www.linkedin.com/in/janedoe', user],
-		['Gevin Sankalya', 'https://www.linkedin.com/in/alicedoe', user],
+		['Gevin Sankalya', 'https://www.linkedin.com/in/gevin-nanayakkara/', gevin],
 		['Ruchini Thathsarani', 'https://www.linkedin.com/in/bobdoe', user],
 		['Dulneth Hansaja', 'https://www.linkedin.com/in/bobdoe', hansaja],
 		['Chamika Banu', 'https://www.linkedin.com/in/bobdoe', chamika],
