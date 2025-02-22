@@ -1,7 +1,7 @@
-import axios from 'axios'
 import { useState } from 'react'
 import { LoaderCircle } from 'lucide-react'
 import { toast } from 'react-hot-toast'
+import emailjs from '@emailjs/browser'
 
 function FeedbackForm() {
 	const [data, setData] = useState({
@@ -11,27 +11,58 @@ function FeedbackForm() {
 	})
 	const [isSubmitting, setIsSubmitting] = useState(false)
 
+	const isValidEmail = (email) => {
+		const re = /^[^\s@]+@[^\s@]+\.[^\s@]+$/
+		return re.test(email)
+	}
+
 	const handleSubmit = async (event) => {
 		event.preventDefault()
 		setIsSubmitting(true)
+
 		const { name, email, message } = data
 
-		try {			
-			const response = await axios.post('http://localhost:8000/feedback', {
-				name,
-				email,
-				message,
-			})
+		if (!name.trim() || !email.trim() || !message.trim()) {
+			toast.error('All fields are required')
+			setIsSubmitting(false)
+			return
+		}
 
-			// Reset the form after successful submission
+		if (!isValidEmail(email)) {
+			toast.error('Invalid email address')
+			setIsSubmitting(false)
+		}
+
+		// EmailJS credentials
+		const SERVICE_ID = import.meta.env.VITE_SERVICE_ID
+		const TEMPLATE_ID_COMPANY = import.meta.env.VITE_TEMPLATE_ID_COMPANY
+		const TEMPLATE_ID_USER = import.meta.env.VITE_TEMPLATE_ID_USER
+		const PUBLIC_KEY = import.meta.env.VITE_PUBLIC_KEY
+
+
+		// Email data
+		const companyEmailData = { name, email, message }
+		const userEmailData = {
+			name,
+			message,
+			send_to: email,
+		}
+
+		try {
+			// Send email to the company (admin)
+			await emailjs.send(SERVICE_ID, TEMPLATE_ID_COMPANY, companyEmailData, PUBLIC_KEY)
+			console.log('Admin email sent')
+
+			// Send acknowledgment email to the user
+			await emailjs.send(SERVICE_ID, TEMPLATE_ID_USER, userEmailData, PUBLIC_KEY)
+			console.log('User email sent')
+
+			// Reset form after success
 			setData({ name: '', email: '', message: '' })
 			toast.success('Message sent successfully')
-		} catch (error) {						
-			if (error.response && error.response.data) {
-				toast.error(error.response.data)
-			} else {
-				toast.error('Server encountered an issue!')
-			}
+		} catch (error) {
+			console.error('Error sending email:', error)
+			toast.error('Failed to send email')
 		} finally {
 			setIsSubmitting(false)
 		}
