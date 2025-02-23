@@ -23,7 +23,7 @@ function Contact() {
 					<div className='flex flex-col gap-4 md:px-24 lg:px-0'>
 						<p className='text-xl'>Stay Connected</p>
 
-						<Tooltip title=''>
+						<Tooltip title='Visit our LinkedIn'>
 							<a
 								href='https://www.linkedin.com/company/maternify'
 								target='_blank'

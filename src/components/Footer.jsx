@@ -33,7 +33,7 @@ const Footer = () => {
 						</Tooltip>
 						<Tooltip title='Visit our LinkedIn'>
 							<a
-								href='https://www.linkedin.com/in/yourprofile'
+								href='https://www.linkedin.com/company/maternify'
 								target='_blank'
 							>
 								<FaLinkedin
