@@ -22,7 +22,7 @@ const Footer = () => {
 					<div className='my-6 flex gap-4 md:w-[75%]'>
 						<Tooltip title='Follow us on Instagram'>
 							<a
-								href='https://www.instagram.com/yourprofile'
+								href='https://www.instagram.com/maternify.team'
 								target='_blank'
 							>
 								<FaInstagram
@@ -43,7 +43,7 @@ const Footer = () => {
 							</a>
 						</Tooltip>
 						<Tooltip title='Send us an email'>
-							<a href='mailto:Maternify@gmail.com'>
+							<a href='mailto:maternify.contact@gmail.com'>
 								<FaAt
 									size={30}
 									className='cursor-pointer transition-colors duration-200 hover:text-[#38bdf8]'
