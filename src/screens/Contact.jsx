@@ -25,7 +25,7 @@ function Contact() {
 
 						<Tooltip title='Visit our LinkedIn'>
 							<a
-								href='https://www.linkedin.com/company/maternify'
+								href='https://www.linkedin.com/company/maternify-info'
 								target='_blank'
 								className='flex cursor-pointer items-center gap-4 rounded-md border border-gray-200 p-4 transition-shadow duration-300 hover:shadow-lg'
 							>
