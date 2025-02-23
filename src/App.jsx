@@ -1,15 +1,16 @@
 import { Routes, Route } from 'react-router-dom'
 import { Toaster } from 'react-hot-toast'
+import ScrollToTop from './utils/ScrollToTop'
 import Navbar from './components/Navbar'
 import Footer from './components/Footer'
 import Home from './screens/Home'
 import About from './screens/About'
 import Contact from './screens/Contact'
 
-
 function App() {
 	return (
 		<>
+			<ScrollToTop />
 			<Navbar />
 			<Routes>
 				<Route

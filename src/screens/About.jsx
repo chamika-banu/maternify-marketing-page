@@ -1,16 +1,30 @@
 import MemberCard from '../components/MemberCard'
-import user from '../assets/members/user.jpeg'
+import karunya from '../assets/members/karunya.jpg'
+import lehara from '../assets/members/lehara.jpeg'
+import gevin from '../assets/members/gevin.jpg'
+import ruchini from '../assets/members/ruchini.jpeg'
 import chamika from '../assets/members/chamika.jpeg'
 import hansaja from '../assets/members/hansaja.jpeg'
-import gevin from '../assets/members/gevin.jpg'
 
 function About() {
 	const members = [
-		['Karunya Jeyabalan', 'https://www.linkedin.com/in/johndoe', user],
-		['Lehara Chamee', 'https://www.linkedin.com/in/janedoe', user],
-		['Gevin Sankalya', 'https://www.linkedin.com/in/gevin-nanayakkara/', gevin],
-		['Ruchini Thathsarani', 'https://www.linkedin.com/in/bobdoe', user],
-		['Dulneth Hansaja', 'https://www.linkedin.com/in/bobdoe', hansaja],
+		[
+			'Karunya Jeyabalan',
+			'https://www.linkedin.com/in/karunya-jeyabalan-6425bb270',
+			karunya,
+		],
+		[
+			'Lehara Chamee',
+			'https://www.linkedin.com/in/lehara-jayasena-736204279',
+			lehara,
+		],
+		['Gevin Sankalya', 'https://www.linkedin.com/in/gevin-nanayakkara', gevin],
+		['Ruchini Thathsarani', 'https://www.linkedin.com/in/ruchinit', ruchini],
+		[
+			'Dulneth Hansaja',
+			'https://www.linkedin.com/in/hansaja-wickrama-670159293',
+			hansaja,
+		],
 		['Chamika Banu', 'https://www.linkedin.com/in/chamika-banu', chamika],
 	]
 	return (
